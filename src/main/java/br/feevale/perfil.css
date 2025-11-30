@@ -1,0 +1,22 @@
+. vbox-borda {
+    -fx-border-color: #000000ff;
+    -fx-border-width: 1;
+}
+.hyperlink {
+    -fx-text-fill: black;            /* Cor padrão do texto */
+    -fx-border-color: transparent;   /* Remove sublinhado padrão */
+    -fx-underline: false;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: black;            /* Cor quando passa o mouse */
+}
+}
+
+.hyperlink:visited {
+    -fx-text-fill: black;            /* Cor após clicar */
+}
+
+.hyperlink:armed {
+    -fx-text-fill: black;            /* Cor enquanto segura o clique */
+}

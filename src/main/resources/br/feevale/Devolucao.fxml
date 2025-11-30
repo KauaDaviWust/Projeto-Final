@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="600.0" stylesheets="@Devolucao.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.feevale.DevolverControle">
+   <children>
+      <BorderPane VBox.vgrow="ALWAYS">
+         <bottom>
+            <HBox fx:id="rodape" prefHeight="50.0" style="-fx-background-color: #36c000ff" BorderPane.alignment="CENTER_LEFT" />
+         </bottom>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER_RIGHT">
+               <children>
+                  <Label text="Codigo do livro">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="codLivro" alignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label fx:id="msg" alignment="CENTER" contentDisplay="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="coonfirmar" mnemonicParsing="false" onAction="#devolver" text="Devolução">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <HBox fx:id="cabecalho" alignment="CENTER_RIGHT" prefHeight="80.0" style="-fx-background-color: #36c000ff" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Hyperlink fx:id="logo" styleClass="hyperlink" text="Biblioteca">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Hyperlink>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="70.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+                  <Hyperlink fx:id="imagem_perfil" onAction="#abrirPerfil" underline="true">
+                     <graphic>
+                        <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" style="-fx-focus-traversable: false;">
+                           <image>
+                              <Image url="@imgs/perfil.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</VBox>

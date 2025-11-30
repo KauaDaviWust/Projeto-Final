@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="600.0" stylesheets="@perfil.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.feevale.LoginControle">
+   <children>
+      <BorderPane VBox.vgrow="ALWAYS">
+         <bottom>
+            <HBox fx:id="rodape" prefHeight="50.0" style="-fx-background-color: #36c000ff" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <HBox fx:id="cabecalho" alignment="CENTER_RIGHT" prefHeight="80.0" style="-fx-background-color: #36c000ff" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <children>
+                        <Label text="Biblioteca">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="268.0" layoutY="145.0" prefHeight="28.0" prefWidth="64.0" text="Codigo" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="268.0">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="275.0" layoutY="253.0" text="Senha" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="273.0">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="codigo" alignment="CENTER" layoutX="158.0" layoutY="173.0" prefHeight="25.0" prefWidth="285.0" promptText="Digite o código" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="157.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="senha" alignment="CENTER" layoutX="159.0" layoutY="281.0" prefHeight="40.0" prefWidth="285.0" promptText="Digite a senha" AnchorPane.leftAnchor="159.0" AnchorPane.rightAnchor="156.0" AnchorPane.topAnchor="281.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font></PasswordField>
+                  <Button layoutX="480.0" layoutY="423.0" mnemonicParsing="false" onAction="#fazerLogin" prefHeight="33.0" prefWidth="106.0" text="Login" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                  <Label fx:id="msgErro" alignment="CENTER" layoutX="173.0" layoutY="361.0" prefHeight="17.0" prefWidth="257.0" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="170.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</VBox>
