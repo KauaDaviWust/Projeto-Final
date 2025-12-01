@@ -103,7 +103,7 @@ public class CadastraUsuarioControle {
             msg.setText("Erro ao salvar BPessoa.csv!");
         }
     }
-
+    //retorna ao inicio
     @FXML
     private void irInicio() throws IOException {
         AppAdm.setRoot("inicioAdm");

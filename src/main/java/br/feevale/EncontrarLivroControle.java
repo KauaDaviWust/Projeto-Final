@@ -30,7 +30,7 @@ public class EncontrarLivroControle implements LerCSV {
     private void irInicio() throws IOException {
         AppAdm.setRoot("inicioAdm");
     }
-
+    //  prenche as tabelas
     @Override
     public void bancoDados() {
 
@@ -64,7 +64,7 @@ public class EncontrarLivroControle implements LerCSV {
             Label localLabel = new Label(local);
 
             if (idUsuario == 0) {
-
+                //adiciona linhas ao grid pane não retirados
                 nRetirados.add(imageView, 0, rowLivres);
                 nRetirados.add(nomeLabel, 1, rowLivres);
                 nRetirados.add(localLabel, 2, rowLivres);
@@ -78,7 +78,7 @@ public class EncontrarLivroControle implements LerCSV {
                 }
 
                 Label quem = new Label("Reservado por: " + nomeReservou);
-
+                //adiciona linhas ao grid pane retirados
                 retirados.add(imageView, 0, rowReservados);
                 retirados.add(nomeLabel, 1, rowReservados);
                 retirados.add(quem, 2, rowReservados);
@@ -86,7 +86,7 @@ public class EncontrarLivroControle implements LerCSV {
             }
         }
     }
-
+    //cria uma lista com usuarios
     private List<Usuario> carregarUsuarios() {
         List<Usuario> lista = new ArrayList<>();
 
@@ -119,7 +119,7 @@ public class EncontrarLivroControle implements LerCSV {
 
         return lista;
     }
-    
+    //cria uma lista de livros
     private List<String[]> carregarLivros() {
         List<String[]> lista = new ArrayList<>();
 

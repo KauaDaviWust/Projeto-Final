@@ -27,7 +27,7 @@ public class DevolverControle extends Navegar implements LerCSV {
 
     @FXML
     public void initialize() {
-        // Cria o PauseTransition
+        // Cria um temporizador que ativa apos parar de digitar no campo de texto
         pause = new PauseTransition(Duration.millis(500));
 
         // Define a ação quando o tempo expira
@@ -45,7 +45,7 @@ public class DevolverControle extends Navegar implements LerCSV {
             pause.playFromStart(); // começa a contar 500ms
         });
     }
-
+    // percorre o bannco para encontrar o livro
     @Override
     public void bancoDados() {
         Livro livro = new Livro();
@@ -73,7 +73,7 @@ public class DevolverControle extends Navegar implements LerCSV {
                 if (!idPessoaStr.equalsIgnoreCase("null") && !idPessoaStr.isEmpty()) {
                     idPessoaLivro = Integer.parseInt(idPessoaStr);
                 }
-
+                //salva as informaçoes do livro
                 if (codigoDigitado.equals(codArquivo) && Sessao.getSessao().getIdPessoa() == idPessoaLivro) {
                     livro.setId(Integer.parseInt(valores[0].trim()));
                     livro.setCodigo(valores[1].trim());

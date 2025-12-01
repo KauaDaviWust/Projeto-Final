@@ -3,6 +3,8 @@ package br.feevale;
 import java.io.IOException;
 
 import javafx.fxml.FXML;
+//controle da tela inicial do administrador
+
 
 public class InicioAdmControle {
    @FXML

@@ -22,13 +22,11 @@ public class CadastraLivroControle {
     private TextField local;
     @FXML
     private Label msg;
-
-    // 👉 Caminho FINAL onde vai salvar de verdade
     private static final String ARQUIVO_LOCAL = "src/main/resources/BLivros.csv";
 
     @FXML
     public void confirma() {
-
+        // valida se os campos estão vazios
         try {
 
             String cod = codigo.getText().trim();
@@ -44,7 +42,7 @@ public class CadastraLivroControle {
             boolean codigoRepetido = false;
             int ultimoId = 0;
 
-            // ☑️ LÊ USANDO RESOURCE (como você pediu)
+            // Lê BLivros na pasta resources
             try (BufferedReader br = new BufferedReader(
                     new InputStreamReader(
                             CadastraLivroControle.class.getResourceAsStream("/BLivros.csv")))) {
@@ -64,7 +62,7 @@ public class CadastraLivroControle {
                     }
                 }
             }
-
+            // caso o código for repetido
             if (codigoRepetido) {
                 msg.setText("Código já existe!");
                 return;
@@ -81,7 +79,7 @@ public class CadastraLivroControle {
                     "0," +
                     " ";
 
-            // ✍️ ESCREVE NO ARQUIVO LOCAL REAL
+            // escreve no arquivo BLivros
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(ARQUIVO_LOCAL, true))) {
                 bw.write(novaLinha);
                 bw.newLine();
@@ -100,7 +98,7 @@ public class CadastraLivroControle {
             msg.setText("Erro ao salvar no CSV!");
         }
     }
-
+    //retorna ao inicio
     @FXML
     private void irInicio() throws IOException {
         AppAdm.setRoot("inicioAdm");

@@ -8,9 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * JavaFX App
- */
+// app do adiministrador
 public class AppAdm extends Application {
 
     private static Scene scene;
